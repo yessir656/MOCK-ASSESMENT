@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css"> 
+
+</head>
+<body>
+    
+     <div class="dashboard-container">
+        <h2 id="welcomeMessage"></h2>
+        <p id="roleMessage"></p>
+        <button id="logoutButton">Logout</button>
+        <h2>Employees</h2>
+        <button id="addEmployeeButton">Add Employee</button>
+        <input type="text" id="searchInput" placeholder="Search Employees">
+        <div id="employeeModal" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle">Add Employee</h2>
+                <input type="hidden" id="employeeId">
+                <input type="text" id="firstName" placeholder="First Name">
+                <input type="text" id="lastName" placeholder="Last Name">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="number" id="age" placeholder="Age" required>
+                <button id="saveEmployeeButton">Save</button>
+                <button id="cancelButton"> Cancel </button>
+            </div>
+
+        </div>
+
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTableBody">
+                <!-- Employee data will be populated here -->
+            </tbody>
+
+    </div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
