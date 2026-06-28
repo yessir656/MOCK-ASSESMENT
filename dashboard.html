@@ -17,7 +17,19 @@
         <h2>Employees</h2>
         <button id="addEmployeeButton">Add Employee</button>
         <input type="text" id="searchInput" placeholder="Search Employees">
+
+            <select id="sortSelect">
+                <option value="">Sort By</option>
+                <option value="firstName">First Name</option>
+                <option value="lastName">Last Name</option>
+                <option value="email">Email</option>
+                <option value="age">Age(Youngest)</option>
+                <option value="ageDesc">Age(Oldest)</option>
+            </select>
+
+
         <div id="employeeModal" class="modal">
+
             <div class="modal-content">
                 <h2 id="modalTitle">Add Employee</h2>
                 <input type="hidden" id="employeeId">
@@ -43,6 +55,14 @@
             <tbody id="employeeTableBody">
                 <!-- Employee data will be populated here -->
             </tbody>
+        </table>
+
+        <div class ="pagination">
+            <button id="prevPageButton">Previous</button>
+            <span id="currentPage">1</span>
+            <button id="nextPageButton">Next</button>
+
+        </div>
 
     </div>
 

@@ -13,6 +13,10 @@ document.getElementById("welcomeMessage").textContent =
 document.getElementById("roleMessage").textContent =
     `Role: ${currentUser.role}`;
 
+if (currentUser.role == "User"){
+    document.getElementById("addEmployeeButton").style.display = "none";
+}
+
 // Modal
 const employeeModal = document.getElementById("employeeModal");
 const addEmployeeButton = document.getElementById("addEmployeeButton");
