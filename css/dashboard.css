@@ -1,0 +1,469 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+html,
+body{
+
+    width:100%;
+
+    overflow-x:hidden;
+
+}
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:#f4f7fb;
+
+    color:#1f2937;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.card{
+
+    border-radius:18px;
+
+    transition:.25s;
+
+}
+
+.card:hover{
+
+    box-shadow:0 .75rem 2rem rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+h2{
+
+    font-weight:700;
+
+}
+
+#welcomeMessage{
+
+    font-size:1rem;
+
+    color:#374151;
+
+}
+
+#roleMessage{
+
+    color:#6b7280;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.btn{
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+.form-control{
+
+    height:52px;
+
+    border-radius:12px;
+
+}
+
+.form-control:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 .2rem rgba(37,99,235,.15);
+
+}
+
+/* ==========================================
+   SORT
+========================================== */
+
+.form-select{
+
+    height:52px;
+
+    border-radius:12px;
+
+}
+
+.form-select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 .2rem rgba(37,99,235,.15);
+
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.table{
+
+    margin:0;
+
+}
+
+.table thead{
+
+    font-size:.95rem;
+
+}
+
+.table th{
+
+    white-space:nowrap;
+
+    padding:18px;
+
+}
+
+.table td{
+
+    padding:18px;
+
+    vertical-align:middle;
+
+}
+
+.table-hover tbody tr:hover{
+
+    background:#eef5ff;
+
+}
+
+.table-responsive{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+/* ==========================================
+   PAGINATION
+========================================== */
+
+
+
+.pagination-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:16px;
+
+    flex-wrap:nowrap;
+
+}
+
+#currentPage{
+
+    min-width:60px;
+
+    text-align:center;
+
+    font-weight:700;
+
+}
+
+.pagination-wrapper .btn{
+    min-width: 110px;
+}
+/* ==========================================
+   MODAL
+========================================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.modal.show{
+
+    display:flex;
+
+}
+
+.modal-content{
+
+    background:white;
+
+    width:100%;
+
+    max-width:500px;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.2);
+
+    animation:popup .25s ease;
+
+}
+
+@keyframes popup{
+
+from{
+
+opacity:0;
+
+transform:scale(.9);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+.modal-content h2{
+
+    margin-bottom:25px;
+
+}
+
+.modal-content input{
+
+    width:100%;
+
+    height:50px;
+
+    margin-bottom:18px;
+
+    padding:0 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+}
+
+.modal-content input:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 .2rem rgba(37,99,235,.15);
+
+}
+
+#saveEmployeeButton{
+
+    width:100%;
+
+    margin-bottom:12px;
+
+}
+
+#cancelButton{
+
+    width:100%;
+
+}
+
+/* ==========================================
+   DASHBOARD SKELETON
+========================================== */
+
+#dashboardSkeleton{
+
+    min-height:100vh;
+
+    background:#f4f7fb;
+
+    padding:20px;
+
+}
+
+.skeleton{
+
+    background:linear-gradient(
+        90deg,
+        #e5e7eb 25%,
+        #f3f4f6 50%,
+        #e5e7eb 75%
+    );
+
+    background-size:400% 100%;
+
+    animation:shimmer 1.2s linear infinite;
+
+    border-radius:10px;
+
+}
+
+.skeleton-header{
+
+    height:38px;
+
+    width:320px;
+
+}
+
+.skeleton-small{
+
+    height:18px;
+
+    width:180px;
+
+}
+
+.skeleton-button{
+
+    height:52px;
+
+    width:100%;
+
+}
+
+.skeleton-input{
+
+    height:52px;
+
+    width:100%;
+
+}
+
+.skeleton-cell{
+
+    height:20px;
+
+    width:100%;
+
+}
+
+.table td{
+
+    vertical-align:middle;
+
+}
+
+@keyframes shimmer{
+
+    0%{
+
+        background-position:-400px 0;
+
+    }
+
+    100%{
+
+        background-position:400px 0;
+
+    }
+
+}
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:992px){
+
+.card-body{
+
+padding:20px;
+
+}
+
+.table{
+
+font-size:.9rem;
+
+}
+
+.modal-content{
+
+margin:20px;
+
+}
+
+}
+
+/* ==========================================
+   PHONE
+========================================== */
+
+@media(max-width:576px){
+
+.btn{
+
+width:100%;
+
+}
+
+.table{
+
+font-size:.82rem;
+
+}
+
+.table td{
+
+padding:12px;
+
+}
+
+.table th{
+
+padding:12px;
+
+}
+
+}
+
+
+
+
